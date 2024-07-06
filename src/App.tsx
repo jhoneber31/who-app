@@ -7,9 +7,9 @@ function App() {
   return (
     <>
       <Navbar/>
-      <section>
+      <main>
         <AppRouter/>
-      </section>
+      </main>
       <Footer/>
     </>
   )
