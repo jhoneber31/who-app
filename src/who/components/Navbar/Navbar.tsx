@@ -4,7 +4,7 @@ import { ArrowDown, CallIcon, CartIcon, HamburgerIcon, SearchIcon } from "../com
 
 export const Navbar = () => {
   return (
-    <header className="bg-[#FFFFFF] sticky top-0 left-0 lg:static">
+    <header className="bg-[#FFFFFF] sticky top-0 left-0 lg:static z-50">
       <nav className="pt-2 mb-2 flex justify-center lg:pt-4 lg:mb-0">
         <div className="container mx-auto flex items-center justify-between gap-x-2 px-2 md:px-4 md:gap-x-4 xl:gap-x-6 lg:px-0 xl:justify-between max-w-[90vw] md:max-w-[95vw] xl:max-w-[90vw]">
           <button className="lg:hidden">
