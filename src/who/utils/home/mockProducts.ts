@@ -1,5 +1,5 @@
 
-type ProductsCategory = {
+export type ProductsCategory = {
   id: number;
   name: string;
   brand: string;
@@ -9,7 +9,7 @@ type ProductsCategory = {
   image: string;
 }
 
-type Category = {
+export type Category = {
   nameCategory: string;
   image: string;
   products: ProductsCategory[];
@@ -99,24 +99,6 @@ export const mockProducts:Category[] = [
         listPrice: 800,
         image: 'https://cdn.shopify.com/s/files/1/3009/5686/products/541826.png?v=1678045763&width=600&height=600&crop=center'
       },
-      {
-        id: 11,
-        name: 'Tecmen iExp950 Flip-Up Welding Helmet',
-        brand:'ClearWelding',
-        partNumber: 'WH950.BK',
-        offerPrice: 649 ,
-        listPrice: 800,
-        image: 'https://cdn.shopify.com/s/files/1/3009/5686/products/541826.png?v=1678045763&width=600&height=600&crop=center'
-      },
-      {
-        id: 12,
-        name: 'Tecmen iExp950 Flip-Up Welding Helmet',
-        brand:'ClearWelding',
-        partNumber: 'WH950.BK',
-        offerPrice: 649 ,
-        listPrice: 800,
-        image: 'https://cdn.shopify.com/s/files/1/3009/5686/products/541826.png?v=1678045763&width=600&height=600&crop=center'
-      }
     ]
   },
   {
@@ -158,24 +140,6 @@ export const mockProducts:Category[] = [
         offerPrice: 2299,
         listPrice: 2583.90,
         image: 'https://cdn.shopify.com/s/files/1/3009/5686/files/3m-speedglas-g5-01-tw-617820_9fae83a2-a229-49f8-b7d5-a1917e28b528.png?v=1708953396&width=600&height=600&crop=center'
-      },
-      {
-        id: 17,
-        name: 'Tecmen iExp950 Flip-Up Welding Helmet',
-        brand:'ClearWelding',
-        partNumber: 'WH950.BK',
-        offerPrice: 649 ,
-        listPrice: 800,
-        image: 'https://cdn.shopify.com/s/files/1/3009/5686/products/541826.png?v=1678045763&width=600&height=600&crop=center'
-      },
-      {
-        id: 18,
-        name: '3M Speedglas Flip-Up Welding Helmet 9100XXi FX',
-        brand:'3M Speedglas',
-        partNumber: '541826',
-        offerPrice: 899,
-        listPrice: 966.90,
-        image: 'https://cdn.shopify.com/s/files/1/3009/5686/products/541826.png?v=1678045763&width=600&height=600&crop=center'
       },
     ]
   }
