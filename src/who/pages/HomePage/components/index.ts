@@ -1,2 +1,3 @@
-export * from './CarouselMain';
+export * from './CarouselDesktop';
 export * from './CarouselMobile';
+export * from './BenefitsSection';

@@ -8,7 +8,7 @@ export const ArrowDown = () => {
       className="w-5 h-5 transition rotate-0"
     >
       <title>Welding Helmets</title>
-      <path d="M14 8L10 12L6 8" stroke-width="1.25"></path>
+      <path d="M14 8L10 12L6 8" strokeWidth="1.25"></path>
     </svg>
   );
 };

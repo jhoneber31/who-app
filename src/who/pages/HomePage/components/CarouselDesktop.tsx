@@ -7,7 +7,7 @@ import "@egjs/react-flicking/dist/flicking.css";
 import { AutoPlay, Fade } from "@egjs/flicking-plugins";
 import { Link } from "react-router-dom";
 
-export const CarouselMobile = () => {
+export const CarouselDesktop = () => {
   const fade = new Fade();
 
   const flickingRef = useRef<Flicking>(null);
@@ -43,7 +43,7 @@ export const CarouselMobile = () => {
   }, []);
 
   return (
-    <section className="carousel-slider-mobile lg:hidden">
+    <section className="carousel-slider-mobile hidden lg:block">
       <div className="relative">
         <Flicking
           ref={flickingRef}
@@ -57,19 +57,19 @@ export const CarouselMobile = () => {
               key={index}
             >
               <Link to={image.path}>
-                <img src={image.mobile} alt={image.name} />
+                <img src={image.desktop} alt={image.name} />
               </Link>
             </div>
           ))}
         </Flicking>
         <button
-          className="text-[24px] absolute top-[50%] z-40 translate-y-[-50%] left-[2%] p-3 text-gray-400"
+          className="text-[32px] absolute top-[50%] z-40 translate-y-[-50%] left-[2%] p-3 text-gray-400"
           onClick={handlePrev}
         >
           ❮
         </button>
         <button
-          className="text-[24px] absolute top-[50%] z-40 translate-y-[-50%] right-[2%] p-3 text-gray-400"
+          className="text-[32px] absolute top-[50%] z-40 translate-y-[-50%] right-[2%] p-3 text-gray-400"
           onClick={handleNext}
         >
           ❯

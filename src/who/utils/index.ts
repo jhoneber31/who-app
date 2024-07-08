@@ -1,2 +1,2 @@
-export * from './routesNav';
-export * from './imagesCarouselMain';
+export * from './navbar/index';
+export * from './home/index';
