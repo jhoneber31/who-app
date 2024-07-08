@@ -1,11 +1,12 @@
-import { BenefitsSection, CarouselDesktop, CarouselMobile } from "./components"
+import { BenefitsSection, CarouselDesktop, CarouselMobile, CarouselProducts } from "./components"
 
 export const HomePage = () => {
   return (
-    <div className="bg-white h-[100vh]">
+    <div className="bg-white">
       <CarouselMobile/>
       <BenefitsSection/>
       <CarouselDesktop/>
+      <CarouselProducts/>
     </div>
   )
 }
