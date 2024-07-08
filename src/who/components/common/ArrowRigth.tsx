@@ -1,4 +1,4 @@
-export const ArrowRigthRed = () => {
+export const ArrowRigth = () => {
   return (
     <svg
       stroke="currentColor"
