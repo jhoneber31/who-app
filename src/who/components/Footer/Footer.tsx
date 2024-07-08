@@ -2,6 +2,12 @@ import { useState } from "react"
 import { SearchIcon,ArrowDown, ArrowRigth } from "../common"
 import { routesNav } from "../../utils";
 
+import facebookIcon from '../../../assets/facebook-icon.svg';
+import instagramIcon from '../../../assets/instagram-icon.svg';
+import youtubeIcon from '../../../assets/youtube-icon.svg';
+import tiktokIcon from '../../../assets/tiktok-icon.svg';
+import visaIcon from '../../../assets/visa-icon.svg';
+
 type OptionsFooter = {
   menu:boolean;
   contact:boolean;
@@ -31,16 +37,16 @@ export const Footer = () => {
             <img src="https://cdn.shopify.com/oxygen-v2/29651/20627/42665/606537/build/_assets/logo_weldinghelmetsonline-C2VEEW2E.webp"   alt="logo-footer"className="max-w-[70%] xl:max-w-[50%]" />
             <div className="media flex gap-x-4 justify-center xl:pl-4">
               <a href="">
-                <img src="/src/assets/facebook-icon.svg" alt="facebook-icon"   className="w-[24px] xl:w-[30px]" />
+                <img src={facebookIcon} alt="facebook-icon"   className="w-[24px] xl:w-[30px]" />
               </a>
               <a href="">
-                <img src="/src/assets/instagram-icon.svg" alt="instagram-icon" className="w-[24px] xl:w-[30px]" />
+                <img src={instagramIcon} alt="instagram-icon" className="w-[24px] xl:w-[30px]" />
               </a>
               <a href="">
-                <img src="/src/assets/youtube-icon.svg" alt="youtube-icon"     className="w-[24px] xl:w-[30px]" />
+                <img src={youtubeIcon} alt="youtube-icon"     className="w-[24px] xl:w-[30px]" />
               </a>
               <a href="">
-                <img src="/src/assets/tiktok-icon.svg" alt="tiktok-icon"       className="w-[24px] xl:w-[30px]" />
+                <img src={tiktokIcon} alt="tiktok-icon"       className="w-[24px] xl:w-[30px]" />
               </a>
             </div>
           </div>
@@ -111,7 +117,7 @@ export const Footer = () => {
                 </div>
               )
             }
-            <div className="hidden xl:block text-white text-[16px] font-normal">
+            <div className="hidden xl:block text-white text-[16px] font-normal pt-4">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe et ad rerum expedita debitis quisquam illo delectus dolores quaerat. Doloribus sit corrupti cum a possimus deleniti. Amet pariatur in reiciendis.</p>
             </div>
           </div>
@@ -126,12 +132,12 @@ export const Footer = () => {
             </div>
             {
               showOptions.terms && (
-                <div className="bg-[#4a4a4a] py-4 px-4 text-white text-[14px] font-normal hidden">
+                <div className="bg-[#4a4a4a] py-4 px-4 text-white text-[14px] font-normal xl:hidden">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe et ad rerum expedita debitis quisquam illo delectus dolores quaerat. Doloribus sit corrupti cum a possimus deleniti. Amet pariatur in reiciendis.</p>
                 </div>
               )
             }
-            <div className="hidden xl:block text-white text-[16x] font-normal">
+            <div className="hidden xl:block text-white text-[16x] font-normal pt-4">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe et ad rerum expedita debitis quisquam illo delectus dolores quaerat. Doloribus sit corrupti cum a possimus deleniti. Amet pariatur in reiciendis.</p>
             </div>
           </div>
@@ -140,12 +146,12 @@ export const Footer = () => {
               Payment methods
             </span>
             <div className="grid grid-cols-3 max-w-[15rem] mt-2">
-              <img src='/src/assets/visa-icon.svg' alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
-              <img src='/src/assets/visa-icon-2.svg'alt="visa-icon" className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
-              <img src='/src/assets/visa-icon.svg' alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
-              <img src='/src/assets/visa-icon.svg' alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
-              <img src='/src/assets/visa-icon.svg' alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
-              <img src='/src/assets/visa-icon.svg' alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
+              <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
+              <img src={visaIcon} alt="visa-icon" className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
+              <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
+              <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
+              <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
+              <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
             </div>
           </div>
         </div>

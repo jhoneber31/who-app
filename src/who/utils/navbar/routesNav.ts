@@ -30,7 +30,7 @@ export const routesNav:RoutesNav[] = [
   },
   {
     name: "Free Delivery Policy",
-    path: "/"
+    path: "/freedelivery"
   },
   {
     name: "About",

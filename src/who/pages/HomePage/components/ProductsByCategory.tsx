@@ -16,9 +16,9 @@ export const ProductsByCategory = ({
 }: ProductCategory) => {
 
   return (
-    <section className={`bg-[${backgroundColor}]`}>
+    <section className={`bg-[#${backgroundColor}]`}>
     <div className="container mx-auto px-5 py-10">
-      <h3 className={`text-[20px] lg:text-[30px] font-bold mb-8 xl:mb-10 text-center ${backgroundColor === '#E5E5E5' ? 'text-[#484848]' : 'text-[#FFFFFF]'}`}>
+      <h3 className={`text-[20px] lg:text-[30px] font-bold mb-8 xl:mb-10 text-center ${backgroundColor === 'E5E5E5' ? 'text-[#484848]' : 'text-[#FFFFFF]'}`}>
         {nameCategory}
       </h3>
       <div className="carrousel overflow-x-auto flex gap-x-4 lg:overflow-auto lg:grid lg:grid-cols-5 xl:gap-x-8">

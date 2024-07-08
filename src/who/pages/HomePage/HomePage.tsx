@@ -10,9 +10,9 @@ export const HomePage = () => {
       <CarouselMobile/>
       <BenefitsSection/>
       <CarouselDesktop/>
-      <ProductsByCategory {...product[0]} backgroundColor={"#1b1b1b"}/>
-      <ProductsByCategory {...product[1]} backgroundColor={"#E5E5E5"}/>
-      <ProductsByCategory {...product[2]} backgroundColor={"#1b1b1b"}/>
+      <ProductsByCategory {...product[0]} backgroundColor={"1b1b1b"}/>
+      <ProductsByCategory {...product[1]} backgroundColor={"E5E5E5"}/>
+      <ProductsByCategory {...product[2]} backgroundColor={"1b1b1b"}/>
       <ProductsByBrand/>
       <OurPartners/>
       <BlogSection/>
