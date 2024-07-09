@@ -5,3 +5,5 @@ export * from './CallIcon';
 export * from './ArrowDown';
 export * from './CartIconButton';
 export * from './ArrowRigth';
+export * from './IconDeliveryPackage';
+export * from './StarIcon';

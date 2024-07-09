@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { CartIconButton } from "../../../components/common";
 import { ProductsCategory } from "../../../utils";
 
@@ -18,6 +19,12 @@ export const ProductsByCategory = ({
   const backgroundClass =
     backgroundColor === "E5E5E5" ? "bg-[#E5E5E5] py-6" : "bg-[#1b1b1b] py-6";
 
+  const navigate = useNavigate();
+
+  const handleClick = (id:number) => {
+    navigate(`/product/${id}`);
+  }
+
   return (
     <section className={backgroundClass}>
       <div className="container mx-auto px-5 py-10">
@@ -33,6 +40,7 @@ export const ProductsByCategory = ({
             <div
               key={product.id}
               className="flex flex-col min-w-52 lg:min-w-0 bg-[#FFFFFF] rounded-lg lg:col-span-1 cursor-pointer"
+              onClick={() => handleClick(product.id)}
             >
               <div className="relative lg:flex lg:justify-center">
                 <img
