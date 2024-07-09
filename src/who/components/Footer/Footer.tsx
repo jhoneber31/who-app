@@ -9,6 +9,7 @@ import tiktokIcon from '../../../assets/tiktok-icon.svg';
 import visaIcon from '../../../assets/visa-icon.svg';
 import mastercardIcon from '../../../assets/mastercard-icon.svg';
 import americanIcon from '../../../assets/american-express-icon.svg';
+import { Link } from "react-router-dom";
 
 
 type OptionsFooter = {
@@ -39,16 +40,16 @@ export const Footer = () => {
           <div className="flex flex-col xl:flex-row items-center">
             <img src="https://cdn.shopify.com/oxygen-v2/29651/20627/42665/606537/build/_assets/logo_weldinghelmetsonline-C2VEEW2E.webp"   alt="logo-footer"className="max-w-[70%] xl:max-w-[50%]" />
             <div className="media flex gap-x-4 justify-center xl:pl-4">
-              <a href="">
+              <a href="" target="blank">
                 <img src={facebookIcon} alt="facebook-icon"   className="w-[24px] xl:w-[30px]" />
               </a>
-              <a href="">
+              <a href="" target="blank">
                 <img src={instagramIcon} alt="instagram-icon" className="w-[24px] xl:w-[30px]" />
               </a>
-              <a href="">
+              <a href="" target="blank">
                 <img src={youtubeIcon} alt="youtube-icon"     className="w-[24px] xl:w-[30px]" />
               </a>
-              <a href="">
+              <a href="" target="blank">
                 <img src={tiktokIcon} alt="tiktok-icon"       className="w-[24px] xl:w-[30px]" />
               </a>
             </div>
@@ -87,7 +88,9 @@ export const Footer = () => {
                   {
                     routesNav.map((route, index) => (
                       <li key={index} className="cursor-pointer">
-                        {route.name}
+                        <Link to={route.path}>
+                          {route.name}
+                        </Link>
                       </li>
                     ))
                   }
@@ -98,7 +101,9 @@ export const Footer = () => {
               {
                 routesNav.map((route, index) => (
                   <li key={index} className="cursor-pointer">
-                    {route.name}
+                    <Link to={route.path}>
+                      {route.name}
+                    </Link>
                   </li>
                 ))
               }
