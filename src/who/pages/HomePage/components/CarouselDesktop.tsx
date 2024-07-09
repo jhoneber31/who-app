@@ -4,13 +4,10 @@ import { imagesCarouselMain } from "../../../utils";
 
 import Flicking, { FlickingEvents } from "@egjs/react-flicking";
 import "@egjs/react-flicking/dist/flicking.css";
-import { AutoPlay, Fade, Parallax } from "@egjs/flicking-plugins";
+import { AutoPlay} from "@egjs/flicking-plugins";
 import { Link } from "react-router-dom";
 
 export const CarouselDesktop = () => {
-  const fade = new Fade();
-
-  const parallax = new Parallax();
 
   const flickingRef = useRef<Flicking>(null);
 
@@ -49,9 +46,11 @@ export const CarouselDesktop = () => {
       <div className="relative">
         <Flicking
           ref={flickingRef}
-          plugins={[parallax, autoplay]}
+          plugins={[autoplay]}
           circular={true}
-          moveType={"snap"}
+          moveType="snap"
+          defaultIndex={0}
+          align="center"
         >
           {imagesCarouselMain.map((image, index) => (
             <div
@@ -59,7 +58,7 @@ export const CarouselDesktop = () => {
               key={index}
             >
               <Link to={image.path}>
-                <img src={image.desktop} alt={image.name} />
+                <img src={image.desktop} alt={image.name} className="w-full h-full object-cover" />
               </Link>
             </div>
           ))}

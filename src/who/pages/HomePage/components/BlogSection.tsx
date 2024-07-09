@@ -11,7 +11,7 @@ export const BlogSection = () => {
         <div className="grid grid-cols-1 gap-y-8 md:grid-cols-3 md:gap-x-4">
           {
             mockBlog.map(blog => (
-              <div className="col-span-1 mx-auto bg-[#FFFFFF] shadow-lg" key={blog.id}>
+              <div className="col-span-1 mx-auto bg-[#FFFFFF] shadow-lg cursor-pointer" key={blog.id}>
                 <div className="border shadow-sm max-w-sm 2xl:max-w-sm">
                   <img src={blog.image} alt={blog.title} />
                   <div className="flex flex-col pb-4 px-5">

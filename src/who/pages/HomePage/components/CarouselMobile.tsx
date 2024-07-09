@@ -4,11 +4,10 @@ import { imagesCarouselMain } from "../../../utils";
 
 import Flicking, { FlickingEvents } from "@egjs/react-flicking";
 import "@egjs/react-flicking/dist/flicking.css";
-import { AutoPlay, Fade } from "@egjs/flicking-plugins";
+import { AutoPlay } from "@egjs/flicking-plugins";
 import { Link } from "react-router-dom";
 
 export const CarouselMobile = () => {
-  const fade = new Fade();
 
   const flickingRef = useRef<Flicking>(null);
 
@@ -47,7 +46,7 @@ export const CarouselMobile = () => {
       <div className="relative">
         <Flicking
           ref={flickingRef}
-          plugins={[fade, autoplay]}
+          plugins={[autoplay]}
           circular={true}
           moveType={"snap"}
         >

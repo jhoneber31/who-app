@@ -29,4 +29,9 @@ export const mockPartners = [
     name: "Partner 6",
     image: "https://cdn.shopify.com/oxygen-v2/29651/20627/42665/606537/build/_assets/weldinhelmetsonline-clearwelding-OTHGTLRF.avif",   
   },
+  {
+    id: 7,
+    name: "Partner 7",
+    image: "https://cdn.shopify.com/oxygen-v2/29651/20627/42665/606537/build/_assets/weldinhelmetsonline-clearwelding-OTHGTLRF.avif",   
+  },
 ];
