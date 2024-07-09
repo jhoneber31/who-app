@@ -7,7 +7,4 @@ body, html {
   font-weight: 700;
 }
 
-.zoom-image {
-  transition: transform 0.2s ease, transform-origin 0.2s ease;
-}
 

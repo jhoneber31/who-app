@@ -7,3 +7,4 @@ export * from './CartIconButton';
 export * from './ArrowRigth';
 export * from './IconDeliveryPackage';
 export * from './StarIcon';
+export * from './ProfileVerification';
