@@ -1,6 +1,9 @@
+import { BannerDelivery } from "./components"
 
 export const FreeDeliveryPolicy = () => {
   return (
-    <div>FreeDeliveryPolicy</div>
+    <div className="bg-[#FFFFFF]">
+      <BannerDelivery/>
+    </div>
   )
 }

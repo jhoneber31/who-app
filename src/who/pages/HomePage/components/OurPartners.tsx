@@ -3,7 +3,7 @@ import { mockPartners } from "../../../utils"
 export const OurPartners = () => {
   return (
     <section className="bg-[#FFFFFF]">
-      <div className="container mx-auto px-5 pb-10">
+      <div className="container mx-auto px-5 py-10">
         <h3 className="text-[#484848] text-[20px] lg:text-[30px] font-bold mb-8 xl:mb-10 text-center">
           OUR PARTNERS
         </h3>

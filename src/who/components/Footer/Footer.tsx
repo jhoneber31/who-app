@@ -7,6 +7,9 @@ import instagramIcon from '../../../assets/instagram-icon.svg';
 import youtubeIcon from '../../../assets/youtube-icon.svg';
 import tiktokIcon from '../../../assets/tiktok-icon.svg';
 import visaIcon from '../../../assets/visa-icon.svg';
+import mastercardIcon from '../../../assets/mastercard-icon.svg';
+import americanIcon from '../../../assets/american-express-icon.svg';
+
 
 type OptionsFooter = {
   menu:boolean;
@@ -146,12 +149,18 @@ export const Footer = () => {
               Payment methods
             </span>
             <div className="grid grid-cols-3 max-w-[15rem] mt-2">
-              <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
-              <img src={visaIcon} alt="visa-icon" className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
-              <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
-              <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
-              <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
-              <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/>
+              <div className="flex items-center justify-center">
+                <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[100px] cursor-pointer"/>
+              </div>
+              <div>
+                <img src={mastercardIcon} alt="visa-icon" className="col-span-1 w-[60px] cursor-pointer"/>
+              </div>
+              <div>
+                <img src={americanIcon} alt="visa-icon"  className="col-span-1 w-[60px] cursor-pointer"/>
+              </div>
+              {/* <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/> */}
+              {/* <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/> */}
+              {/* <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/> */}
             </div>
           </div>
         </div>

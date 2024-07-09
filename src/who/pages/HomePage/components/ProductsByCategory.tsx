@@ -16,7 +16,7 @@ export const ProductsByCategory = ({
 }: ProductCategory) => {
   
   const backgroundClass =
-    backgroundColor === "E5E5E5" ? "bg-[#E5E5E5]" : "bg-[#1b1b1b]";
+    backgroundColor === "E5E5E5" ? "bg-[#E5E5E5] py-6" : "bg-[#1b1b1b] py-6";
 
   return (
     <section className={backgroundClass}>
