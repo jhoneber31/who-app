@@ -97,7 +97,7 @@ export const RelatedProducts = ({ products }: RelatedProductsProps) => {
         </div>
       </div>
       <div className="w-full flex justify-center">
-        <button className="sm:w-[15rem] xl:w-[25rem] rounded-xl px-3 py-2 mt-2 bg-[#d91023] text-[#FFFFFF] flex items-center justify-center hover:bg-red-700">
+        <button className="w-full sm:w-[15rem] xl:w-[25rem] rounded-xl px-3 py-2 mt-2 bg-[#d91023] text-[#FFFFFF] flex items-center justify-center hover:bg-red-700">
           See All
         </button>
       </div>

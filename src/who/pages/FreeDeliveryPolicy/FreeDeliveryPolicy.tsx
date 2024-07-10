@@ -35,10 +35,12 @@ export const FreeDeliveryPolicy = () => {
             </div>
             <div className='pb-4 px-5 pt-8 relative z-20'>
               <span className='text-center block text-[18px] mb-2'>Our Delivery Promise  </span>
-              <p className='text-justify text-[14px] font-normal mb-4'>
-                Welding Helmets Online attempt to carry all core and fast moving products in stock. We are generally able to dispatch the same day you order (if you order before midday Monday - Friday).
-                With some less common parts, or if we have just fulfilled large orders, we sometimes need to order stock in which generally only takes 24 hours. In this case we move quickly to ensure you don’t wait longer than you need to and keep you up-to-date throughout the entire process.
-                With items that are stocked, our delivery times (via Australia Post) are estimated as follows:
+              <div className='text-justify text-[14px] font-normal mb-4'>
+                <p>
+                  Welding Helmets Online attempt to carry all core and fast moving products in stock. We are generally able to dispatch the same day you order (if you order before midday Monday - Friday).
+                  With some less common parts, or if we have just fulfilled large orders, we sometimes need to order stock in which generally only takes 24 hours. In this case we move quickly to ensure you don’t wait longer than you need to and keep you up-to-date throughout the entire process.
+                  With items that are stocked, our delivery times (via Australia Post) are estimated as follows:
+                </p>
                 <ul className='mt-4 grid grid-cols-2 gap-x-5 gap-y-2 mb-4'>
                   <li><strong>NSW:</strong> 1- 2 days</li>
                   <li><strong>Victoria:</strong> 1- 2 days</li>
@@ -48,8 +50,8 @@ export const FreeDeliveryPolicy = () => {
                   <li><strong>Northern Territory:</strong> 4- 6 days</li>
                   <li><strong>Western Australia:</strong> 5 - 6 days</li>
                 </ul>
-                Our standard freight goes via Australia Post (via their commercial hub).
-              </p>
+                <p>Our standard freight goes via Australia Post (via their commercial hub).</p>
+              </div>
             </div>
           </div>
           </div>

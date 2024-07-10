@@ -8,3 +8,4 @@ export * from './ArrowRigth';
 export * from './IconDeliveryPackage';
 export * from './StarIcon';
 export * from './ProfileVerification';
+export * from './CloseIcon';
