@@ -9,13 +9,13 @@ export const ProductsByBrand = () => {
         <div className="flex gap-x-6 lg:gap-x-12 lg:justify-center overflow-x-scroll lg:overflow-x-auto">
           <div className="flex flex-col cursor-pointer">
             <img src="https://cdn.shopify.com/oxygen-v2/29651/20627/42665/606537/build/_assets/3mspeedglas_collection_image-WFLJCTKL.avif"  alt="3M Speedglas Welding Helmets" className="max-w-72 rounded-t-lg" />
-            <div className="bg-[#d91023] py-4 px-4 rounded-b-lg">
+            <div className="bg-[#d91023] py-4 px-4 rounded-b-lg hover:bg-red-700">
               <span className="block text-center text-[#FFFFFF]">3M Speedglas Welding Helmets</span>
             </div>
           </div>
           <div className="flex flex-col cursor-pointer">
             <img src="https://cdn.shopify.com/oxygen-v2/29651/20627/42665/606537/build/_assets/clearwelding-welding-helmets-YPKNG6VV.webp"  alt="Tecmen Welding Helmets" className="max-w-72 rounded-t-lg" />
-            <div className="bg-[#d91023] py-4 px-4 rounded-b-lg">
+            <div className="bg-[#d91023] py-4 px-4 rounded-b-lg hover:bg-red-700">
               <span className="block text-center text-[#FFFFFF]">Tecmen Welding Helmets</span>
             </div>
           </div>

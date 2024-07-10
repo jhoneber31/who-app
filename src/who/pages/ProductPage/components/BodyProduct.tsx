@@ -21,7 +21,7 @@ export const BodyProduct = ({ product }: BodyProductProps) => {
   const flickingRef = useRef<Flicking>(null);
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const [quantity, setQuantity] = useState<number>(1);
+  const [quantity, setQuantity] = useState<string>('1');
 
   const handlePrev = () => {
     flickingRef.current?.prev();
@@ -47,23 +47,28 @@ export const BodyProduct = ({ product }: BodyProductProps) => {
   const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {value} = e.target;
 
-    if(value === '') return setQuantity(1);
+    if(!parseInt(value) && value !== '') return;
+    setQuantity(value);
+  }
 
-    setQuantity(parseInt(value));
+  const onBlur = () => {
+    if(quantity === '') setQuantity('1');
   }
 
   const incrementQuantity = () => {
-    setQuantity(quantity + 1);
+    const value = parseInt(quantity) + 1;
+    setQuantity(value.toString());
   }
 
   const decrementQuantity = () => {
-    if(quantity === 1) return;
-    setQuantity(quantity - 1);
+    if(quantity === '1') return;
+    const value = parseInt(quantity) - 1;
+    setQuantity(value.toString());
   }
 
   useEffect(() => {
     setCurrentIndex(0);
-    setQuantity(1);
+    setQuantity('1');
     flickingRef.current?.moveTo(0);
   },[product])
 
@@ -254,11 +259,12 @@ export const BodyProduct = ({ product }: BodyProductProps) => {
                 -
               </span>
               <input
-                type="number"
+                type="text"
                 className="max-w-[3.5rem] h-full border-x-2 px-2 text-center"
                 value={quantity}
                 name="quantity"
                 onChange={onInputChange}
+                onBlur={onBlur}
               />
               <span 
                 className="flex items-center justify-center text-[#d91023] text-[35px] font-normal h-full w-[2.5rem] cursor-pointer"

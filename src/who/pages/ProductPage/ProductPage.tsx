@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import { mockProducts, ProductsCategory } from "../../utils";
 import { BodyProduct, DetailProduct, RelatedProducts } from "./components";
+import { PageNotFound } from "../PageNotFound/PageNotFound";
 
 export const ProductPage = () => {
 
@@ -46,9 +47,7 @@ export const ProductPage = () => {
               <RelatedProducts products={relatedProducts}/>
             </>
           ) :
-          <div>
-            <h3>Product not found</h3>
-          </div>
+          <PageNotFound/>
         }
       </div>
     </section>

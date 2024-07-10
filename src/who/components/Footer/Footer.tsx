@@ -40,16 +40,16 @@ export const Footer = () => {
           <div className="flex flex-col xl:flex-row items-center">
             <img src="https://cdn.shopify.com/oxygen-v2/29651/20627/42665/606537/build/_assets/logo_weldinghelmetsonline-C2VEEW2E.webp"   alt="logo-footer"className="max-w-[70%] xl:max-w-[50%]" />
             <div className="media flex gap-x-4 justify-center xl:pl-4">
-              <a href="" target="blank">
+              <a href="https://es-la.facebook.com/" target="_blank">
                 <img src={facebookIcon} alt="facebook-icon"   className="w-[24px] xl:w-[30px]" />
               </a>
-              <a href="" target="blank">
+              <a href="https://www.instagram.com/" target="_blank">
                 <img src={instagramIcon} alt="instagram-icon" className="w-[24px] xl:w-[30px]" />
               </a>
-              <a href="" target="blank">
+              <a href="https://www.youtube.com/" target="_blank">
                 <img src={youtubeIcon} alt="youtube-icon"     className="w-[24px] xl:w-[30px]" />
               </a>
-              <a href="" target="blank">
+              <a href="https://ads.tiktok.com/i18n/login?redirect=https%3A%2F%2Fads.tiktok.com%2Fi18n%2Fhome%3Flang%3Den%26attr_source%3Dbing%26attr_medium%3Dsearch-br-ad%26attr_adgroup_id%3D1333709979901523%26attr_term%3Dbusiness%2520account%2520tiktok%26msclkid%3D0bd7fdaea5611c4fb9949b201ef470ec" target="_blank">
                 <img src={tiktokIcon} alt="tiktok-icon"       className="w-[24px] xl:w-[30px]" />
               </a>
             </div>
@@ -155,17 +155,14 @@ export const Footer = () => {
             </span>
             <div className="grid grid-cols-3 max-w-[15rem] mt-2">
               <div className="flex items-center justify-center">
-                <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[100px] cursor-pointer"/>
+                <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[100px]"/>
               </div>
               <div>
-                <img src={mastercardIcon} alt="visa-icon" className="col-span-1 w-[60px] cursor-pointer"/>
+                <img src={mastercardIcon} alt="visa-icon" className="col-span-1 w-[60px]"/>
               </div>
               <div>
-                <img src={americanIcon} alt="visa-icon"  className="col-span-1 w-[60px] cursor-pointer"/>
+                <img src={americanIcon} alt="visa-icon"  className="col-span-1 w-[60px]"/>
               </div>
-              {/* <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/> */}
-              {/* <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/> */}
-              {/* <img src={visaIcon} alt="visa-icon"  className="col-span-1 w-[35px] lg:w-[50px] xl:w-[60px] cursor-pointer"/> */}
             </div>
           </div>
         </div>
