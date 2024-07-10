@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { Link } from "react-router-dom";
 import Flicking, { FlickingEvents } from "@egjs/react-flicking";
+import "@egjs/react-flicking/dist/flicking.css";
 
 import { ProductsCategory } from "../../../utils";
 import {
@@ -17,12 +18,10 @@ type BodyProductProps = {
 
 export const BodyProduct = ({ product }: BodyProductProps) => {
 
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-
   const flickingRef = useRef<Flicking>(null);
 
-  const images = [product.image, product.image,product.image,product.image];
-  const iconStars = Array(5).fill(null);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [quantity, setQuantity] = useState<number>(1);
 
   const handlePrev = () => {
     flickingRef.current?.prev();
@@ -40,6 +39,33 @@ export const BodyProduct = ({ product }: BodyProductProps) => {
     setCurrentIndex(index);
     flickingRef.current?.moveTo(index);
   };
+
+  const iconStars = Array(5).fill(null);
+
+  const images = Array(3).fill(null);
+
+  const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const {value} = e.target;
+
+    if(value === '') return setQuantity(1);
+
+    setQuantity(parseInt(value));
+  }
+
+  const incrementQuantity = () => {
+    setQuantity(quantity + 1);
+  }
+
+  const decrementQuantity = () => {
+    if(quantity === 1) return;
+    setQuantity(quantity - 1);
+  }
+
+  useEffect(() => {
+    setCurrentIndex(0);
+    setQuantity(1);
+    flickingRef.current?.moveTo(0);
+  },[product])
 
   useEffect(() => {
     const flicking = flickingRef.current;
@@ -73,26 +99,29 @@ export const BodyProduct = ({ product }: BodyProductProps) => {
         <div className="sm:flex sm:gap-x-6 mb-4 lg:flex-1">
           <div className="hidden sm:flex sm:flex-col gap-y-3 w-[400px] h-[400px] md:h-[500px] lg:h-auto overflow-y-scroll lg:overflow-y-auto">
             {
-              images.map((image, index) => (
+              images.map((_, index) => (
                 <div 
                   key={index} 
                   className={`p-2 cursor-pointer ${currentIndex ===index ? 'border-2 rounded-2xl border-[#9CA3AF]' : ''}`}
                   onClick={() => handleThumbnailClick(index)}
                 >
-                  <img src={image} alt={product.name} className="" />
+                  <img src={product.image} alt={product.name} className="" />
                 </div>
               ))
             }
           </div>
-          <div className="relative carousel-slider">
-            <Flicking ref={flickingRef} circular={true}>
-              {images.map((image, index) => (
+          <div className="relative carousel-slider lg:h-fit">
+            <Flicking 
+              ref={flickingRef} 
+              circular={true} 
+              defaultIndex={0}>
+              {images.map((_, index) => (
                 <div
                   key={index}
                   className="flex items-center justify-center w-full h-full"
                 >
                   <img 
-                    src={image} 
+                    src={product.image} 
                     alt={product.name} 
                   />
                 </div>
@@ -216,21 +245,29 @@ export const BodyProduct = ({ product }: BodyProductProps) => {
               </p>
             </div>
           </div>
-          <div className="fixed bottom-0 left-0 w-full bg-[#FFFFFF] px-5 py-4 z-40 flex justify-between lg:hidden">
+          <div className="fixed bottom-0 left-0 w-full bg-[#FFFFFF] px-5 py-4 z-40 flex justify-between lg:static lg:mt-10 lg:p-0">
             <div className="flex items-center border-2 rounded-lg">
-              <span className="flex items-center justify-center text-[#d91023] text-[35px] font-normal h-full w-[2.5rem]">
+              <span 
+                className="flex items-center justify-center text-[#d91023] text-[35px] font-normal h-full w-[2.5rem] cursor-pointer"
+                onClick={decrementQuantity}
+              >
                 -
               </span>
               <input
-                type="text"
+                type="number"
                 className="max-w-[3.5rem] h-full border-x-2 px-2 text-center"
-                value={1}
+                value={quantity}
+                name="quantity"
+                onChange={onInputChange}
               />
-              <span className="flex items-center justify-center text-[#d91023] text-[35px] font-normal h-full w-[2.5rem]">
+              <span 
+                className="flex items-center justify-center text-[#d91023] text-[35px] font-normal h-full w-[2.5rem] cursor-pointer"
+                onClick={incrementQuantity}
+              >
                 +
               </span>
             </div>
-            <button className="w-[11rem] rounded-2xl px-3 py-1 bg-[#d91023] text-[#FFFFFF] flex items-center justify-center hover:bg-red-700">
+            <button className="w-[11rem] rounded-2xl px-3 py-1 bg-[#d91023] text-[#FFFFFF] flex items-center justify-center hover:bg-red-70 xl:w-[28rem]">
               <CartIconButton />
               <span>Add to Cart</span>
             </button>

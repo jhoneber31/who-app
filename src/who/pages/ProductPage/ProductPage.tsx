@@ -8,6 +8,7 @@ import { BodyProduct, DetailProduct, RelatedProducts } from "./components";
 export const ProductPage = () => {
 
   const [product, setProduct] = useState<ProductsCategory | null>(null)
+  const [relatedProducts, setRelatedProducts] = useState<ProductsCategory[]>([])
 
   const { id } = useParams<{ id: string }>();
 
@@ -21,6 +22,8 @@ export const ProductPage = () => {
           const foundProduct = category.products.find(product => product.id === productId);
           if(foundProduct) {
             setProduct(foundProduct);
+            const productsByCategoryRelated = category.products.filter(product => product.id !== productId);
+            setRelatedProducts(productsByCategoryRelated);
             break;
           }
         }
@@ -34,13 +37,13 @@ export const ProductPage = () => {
 
   return (
     <section>
-      <div className="container mx-auto px-5 py-5">
+      <div className="container mx-auto px-5 pt-5 pb-14">
         {
           product ? (
             <>
               <BodyProduct product={product}/>
               <DetailProduct/>
-              <RelatedProducts/>
+              <RelatedProducts products={relatedProducts}/>
             </>
           ) :
           <div>
