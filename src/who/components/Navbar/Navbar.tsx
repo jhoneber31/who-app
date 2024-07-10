@@ -45,7 +45,7 @@ export const Navbar = () => {
                 {
                   routesNav.map((route, index) => (
                     <li className="px-6 py-4 font-medium" key={index}>
-                      <Link to={route.path} onClick={()=>setShowNavMobile(false)}>
+                      <Link to={route.path} onClick={toggleNavMobile}>
                         {route.name}
                       </Link>
                     </li>
