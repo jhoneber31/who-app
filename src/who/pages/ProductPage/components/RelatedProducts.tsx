@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 import { ProductsCategory } from "../../../utils";
 import { CartIconButton } from "../../../components/common";
+import { useAppDispatch } from "../../../store/hooks";
+import { increment } from "../../../store/cart/cartSlice";
 
 type RelatedProductsProps = {
   products: ProductsCategory[];
@@ -16,8 +18,15 @@ export const RelatedProducts = ({ products }: RelatedProductsProps) => {
 
   const navigate = useNavigate();
 
+  const dispatch = useAppDispatch();
+
   const handleClick = (id: number) => {
     navigate(`/product/${id}`);
+  };
+
+  const handleAddToCart = (event:React.MouseEvent) => {
+    event.stopPropagation();
+    dispatch(increment(1));
   }
 
   useEffect(() => {
@@ -86,7 +95,10 @@ export const RelatedProducts = ({ products }: RelatedProductsProps) => {
                       </span>
                     </p>
                   </div>
-                  <button className="w-full rounded-xl px-3 py-2 mt-2 bg-[#d91023] text-[#FFFFFF] flex items-center justify-center hover:bg-red-700">
+                  <button 
+                    className="w-full rounded-xl px-3 py-2 mt-2 bg-[#d91023] text-[#FFFFFF] flex items-center justify-center hover:bg-red-700"
+                    onClick={(event) => handleAddToCart(event)}
+                  >
                     <CartIconButton />
                     <span>Add to Cart</span>
                   </button>

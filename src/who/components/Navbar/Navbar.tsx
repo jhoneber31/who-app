@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { routesNav } from "../../utils";
 import {
   ArrowDown,
@@ -9,10 +9,19 @@ import {
   SearchIcon,
 } from "../common";
 import { useState } from "react";
+import { useAppSelector } from "../../store/hooks";
 
 export const Navbar = () => {
   const [showNavMobile, setShowNavMobile] = useState<boolean>(false);
   const [isClosing, setIsClosing] = useState<boolean>(false);
+
+  const navigate = useNavigate();
+
+  const quantity = useAppSelector(state => state.cart.quantity);
+
+  const goToHome = () => {
+    navigate("/");
+  }
 
   const toggleNavMobile = () => {
     if(showNavMobile) {
@@ -62,7 +71,9 @@ export const Navbar = () => {
             <button className="lg:hidden" onClick={toggleNavMobile}>
               <HamburgerIcon />
             </button>
-            <div>
+            <div
+              onClick={goToHome}
+            >
               <img
                 src="https://cdn.shopify.com/oxygen-v2/29651/20627/42665/606537/build/_assets/logo_weldinghelmetsonline-C2VEEW2E.webp"
                 alt="logo-img"
@@ -99,7 +110,7 @@ export const Navbar = () => {
             <span className="relative cursor-pointer">
               <CartIcon />
               <div className="rounded-full w-[20px] h-[20px] text-[14px] absolute top-[-6px] right-[-0.4rem] text-white bg-[#d91023] flex items-center justify-center">
-                <span>1</span>
+                <span>{quantity}</span>
               </div>
             </span>
           </div>

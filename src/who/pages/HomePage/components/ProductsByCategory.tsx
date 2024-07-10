@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { CartIconButton } from "../../../components/common";
 import { ProductsCategory } from "../../../utils";
+import { useAppDispatch } from "../../../store/hooks";
+import { increment } from "../../../store/cart/cartSlice";
 
 type ProductCategory = {
   nameCategory: string;
@@ -21,8 +23,15 @@ export const ProductsByCategory = ({
 
   const navigate = useNavigate();
 
+  const dispatch = useAppDispatch();
+
   const handleClick = (id:number) => {
     navigate(`/product/${id}`);
+  };
+
+  const handleAddToCart = (event:React.MouseEvent) => {
+    event.stopPropagation();
+    dispatch(increment(1));
   }
 
   return (
@@ -89,7 +98,10 @@ export const ProductsByCategory = ({
                     </span>
                   </p>
                 </div>
-                <button className="w-full rounded-xl px-3 py-2 mt-2 bg-[#d91023] text-[#FFFFFF] flex items-center justify-center hover:bg-red-700">
+                <button 
+                  className="w-full rounded-xl px-3 py-2 mt-2 bg-[#d91023] text-[#FFFFFF] flex items-center justify-center hover:bg-red-700"
+                  onClick={(event) => handleAddToCart(event)}
+                >
                   <CartIconButton />
                   <span>Add to Cart</span>
                 </button>

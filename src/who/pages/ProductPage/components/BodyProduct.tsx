@@ -11,6 +11,8 @@ import {
   IconDeliveryPackage,
   StarIcon,
 } from "../../../components/common";
+import { useAppDispatch } from "../../../store/hooks";
+import { increment } from "../../../store/cart/cartSlice";
 
 type BodyProductProps = {
   product: ProductsCategory;
@@ -19,6 +21,7 @@ type BodyProductProps = {
 export const BodyProduct = ({ product }: BodyProductProps) => {
 
   const flickingRef = useRef<Flicking>(null);
+  const dispatch = useAppDispatch();
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [quantity, setQuantity] = useState<string>('1');
@@ -273,7 +276,10 @@ export const BodyProduct = ({ product }: BodyProductProps) => {
                 +
               </span>
             </div>
-            <button className="w-[11rem] rounded-2xl px-3 py-1 bg-[#d91023] text-[#FFFFFF] flex items-center justify-center hover:bg-red-70 xl:w-[28rem]">
+            <button 
+              className="w-[11rem] rounded-2xl px-3 py-1 bg-[#d91023] hover:bg-red-700 text-[#FFFFFF] flex items-center justify-center hover:bg-red-70 xl:w-[28rem]"
+              onClick={() => dispatch(increment(parseInt(quantity)))}
+            >
               <CartIconButton />
               <span>Add to Cart</span>
             </button>
